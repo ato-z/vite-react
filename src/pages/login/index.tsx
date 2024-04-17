@@ -3,6 +3,7 @@ import { message } from 'antd'
 import './index.css'
 import { LoginForm, LoginEvent } from './component/login-form'
 import { upDocumentTitle } from '@/helper'
+import { useSign } from '@/store/auth'
 
 /**
  * 登录页面
@@ -10,6 +11,7 @@ import { upDocumentTitle } from '@/helper'
 export const Login = () => {
   upDocumentTitle('Authorized Login')
 
+  const [, setSign] = useSign()
   const navigate = useNavigate()
 
   const [messageApi, contextHolder] = message.useMessage()
@@ -20,7 +22,11 @@ export const Login = () => {
       content: 'Trying to log in',
       duration: 0,
     })
+
+    console.log('登录信息', _post)
+
     try {
+      setSign('登录之后的密钥')
       navigate('/')
     } catch (err: unknown) {}
 
