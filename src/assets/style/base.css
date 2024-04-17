@@ -1,0 +1,6 @@
+/**
+ * tailwincss 基础配置文件
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
