@@ -14,12 +14,17 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /** 路径别名 */
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["./*.d.ts", "src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

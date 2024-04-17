@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import './index.scss'
+import './index.css'
 
 export const Loading = () => {
   return (
